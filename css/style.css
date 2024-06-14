@@ -105,6 +105,15 @@ input:active {
     justify-items: center;
 }
 
+.welcome-message {
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    font-size: 5vmin;
+    font-weight: 700;
+    color: var(--page-background-color);
+}
+
 .minefield-sector {
     background-color: var(--minefield-sector-color);
     width: 100%;
