@@ -1,3 +1,22 @@
+const difficultyForm = document.getElementById('difficulty-form');
+const difficultySettings = document.getElementById('dificulty-settings');
+const minefield = document.getElementById('minefield');
+
+difficultyForm.addEventListener('submit' , function () {
+    let sectorsNumber;
+
+    if(difficultySettings.value === 'easy') {
+        sectorsNumber = 100;
+    } else if(difficultySettings.value === 'medium') {
+        sectorsNumber = 81;
+    } else {
+        sectorsNumber = 49;
+    }
+
+    createLandfield(minefield , sectorsNumber);
+});
+
+
 // Append a number of landfield sector's div to a minefield contrainer
 function createLandfield (minefieldElement , numberOfSectors) {
     const numberOfRowsAndColumns = Math.sqrt(numberOfSectors);
